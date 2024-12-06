@@ -1,6 +1,8 @@
 pipeline {
-  agent { label 'agente1' }
-
+  // Lugar donde se va a ejecutar el pipeline
+  agent any
+  
+  // Los estados o bloques
   stages {
     stage('Vertificar Docker') {
       steps {
@@ -8,15 +10,15 @@ pipeline {
       }
     }
 
-    stage('Sonarqube') {
-      steps {
-        script {
-          docker.image('sonarsource/sonar-scanner-cli').inside('--network ci-network') {
-            sh 'sonar-scanner'
-          }
-        }
-      }
-    }
+    //stage('Sonarqube') {
+    //  steps {
+    //    script {
+    //      docker.image('sonarsource/sonar-scanner-cli').inside('--network ci-network') {
+    //        sh 'sonar-scanner'
+    //      }
+    //    }
+    //  }
+    //}
 
     // stage('Docker build') {
     //   steps {
