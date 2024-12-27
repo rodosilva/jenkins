@@ -8,6 +8,9 @@ COPY --from=docker:dind /usr/local/bin/docker /usr/local/bin
 USER root
 
 # Agregamos al usuario jenkins al grupo root
+RUN apt-get update
+RUN groupadd -g 999 docker
+RUN usermod -aG docker jenkins
 RUN usermod -aG root jenkins
 
 # Volvemos a cambiar al usuario jenkins
