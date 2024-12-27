@@ -22,17 +22,18 @@ pipeline {
         sh 'docker run --rm jenkins-laravel ./vendor/bin/phpunit tests'
       }
     }
+  }
 
-    post {
-      success {
-        slackSend(channel: '#devops', message: "Todo bien")
-      }
+  post {
+    success {
+      slackSend(channel: '#devops', message: "Todo bien")
+    }
       
-      failure {
-        slackSend(channel: '#devops', message: "Algo anda mal")
-      }
+    failure {
+      slackSend(channel: '#devops', message: "Algo anda mal")
     }
   }
+  
     //stage('Sonarqube') {
     //  steps {
     //    script {
