@@ -38,6 +38,17 @@ Ahí definimos el `Directorio raiz remoto` que es el `Home` donde se almacenará
 
 Deberemos seguir también el mismo paso de añadir al `Known_hosts` visto en [Seteando el Entorno](#seteando-el-entorno)
 
+## Multibranch
+1. Desde `Panel de Control - Todo - Nueva Tarea` podremos crear un `Multibranch Pipeline`
 
+2. Creamos un token desde Github: [New personal access token](https://github.com/settings/tokens/new)
+
+3. Ya en la configuración `Panel de Control - multi - COnfiguration` añadiremos Credenciales (User and Password) y colocaremos el token en el campo de Password.
+
+## Deploy
+Deploy de mi código
+1. Usaremos nuevamente llaves. Donde la pública va al servidor `192.168.64.17` específicado en [deploy.sh](./deploy.sh)
+
+2. Instalar el Plugin `SSH Agent` que nos permitirá conectarnos a diferentes instancias
 
 
