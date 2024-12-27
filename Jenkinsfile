@@ -23,6 +23,17 @@ pipeline {
       }
     }
 
+    post {
+      success {
+        slackSend(channel: '#devops', messsage: "Todo bien")
+
+      }
+      failure {
+        slackSend(channel: '#devops', message: "Algo anda mal")
+
+      }
+    }
+
     //stage('Sonarqube') {
     //  steps {
     //    script {
@@ -41,14 +52,4 @@ pipeline {
     //   }
     // }
   }
-
-  // post {
-  //   success {
-  //     slackSend(channel: '#tutorial', message: "Todo bien")
-  //   }
-
-  //   failure {
-  //     slackSend(channel: '#tutorial', message: "Algo anda mal")
-  //   }
-  // }
 }
