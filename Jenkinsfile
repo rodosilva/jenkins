@@ -32,7 +32,7 @@ pipeline {
         slackSend(channel: '#devops', message: "Algo anda mal")
       }
     }
-
+  }
     //stage('Sonarqube') {
     //  steps {
     //    script {
@@ -50,5 +50,5 @@ pipeline {
     //     }
     //   }
     // }
-  }
+  
 }
