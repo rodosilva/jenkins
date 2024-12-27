@@ -1,6 +1,7 @@
 pipeline {
   // Lugar donde se va a ejecutar el pipeline
-  agent any
+  // agent { label 'agente1' }
+  agent any // Ejecutar en el Agente que tenga disponible
   
   // Los estados o bloques
   stages {
