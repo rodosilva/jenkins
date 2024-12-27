@@ -38,12 +38,6 @@ Ahí definimos el `Directorio raiz remoto` que es el `Home` donde se almacenará
 
 Deberemos seguir también el mismo paso de añadir al `Known_hosts` visto en [Seteando el Entorno](#seteando-el-entorno)
 
-## Multibranch
-1. Desde `Panel de Control - Todo - Nueva Tarea` podremos crear un `Multibranch Pipeline`
-
-2. Creamos un token desde Github: [New personal access token](https://github.com/settings/tokens/new)
-
-
 
 
 
